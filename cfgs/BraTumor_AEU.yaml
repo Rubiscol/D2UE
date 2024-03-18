@@ -1,0 +1,25 @@
+Exp:
+  out_dir: "output/AEU/BraTumor/"
+  gpu: 7
+
+Model:
+  network: "AE-U"  # AE, AE-U, MemAE
+  mp: 1  # multiplier that controls the capacity of AE
+  ls: 16  # the output size of encoder
+  mem_dim: Null
+  shrink_thres: Null
+  layer: 4
+
+Data:
+  dataset: "brain"  # rsna, vin, brain
+  img_size: 64
+
+
+Solver:
+  bs: 64
+  lr: 1.0e-3
+  weight_decay: 0
+  num_epoch: 250
+  seed: 1
+  Lambda: 1
+
