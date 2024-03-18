@@ -49,7 +49,7 @@ All scripts are available in `scripts/`, and configuration files are in `cfgs/`.
 For example, you can choose to train and evaluate the method on RSNA dataset using AE as the backbone: `./scripts/RSNA_AE.sh`
 
 
-The trained models and results are available [here](https://github.com/Rubiscol/D2UE/releases/tag/downloads).
+The trained models and results are available [here](https://github.com/Rubiscol/D2UE/releases/tag/publish).
 
 
 
