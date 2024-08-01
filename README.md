@@ -1,19 +1,19 @@
 # D2UE
-Official PyTorch implementation for our paper "Revisiting Deep Ensemble Uncertainty for Enhanced Medical Anomaly Detection"
+Official PyTorch implementation for our MICCAI 2024 early accepted paper: "Revisiting Deep Ensemble Uncertainty for Enhanced Medical Anomaly Detection"
 
-**An overview of our method:**
+**Illustration of the redundancy-aware repulsion and dual-space uncertainty:**
 <p align="center">
-  <img width="800"  src="./images/method.png">
+  <img width="800"  src="./images/intro.png">
 </p>
 
-Overview of D2UE: (a) During training, a junior learns through a feature path that is distinct from those of all its seniors. (b) During the inference stage, DSU incorporates both output and input-gradient information into the uncertainty estimation. (c) An illustration of over-generalization problem in the output space in 1D regression with two neural networks. The red region represents anomaly while the blue region represents normal data. Two functions output the same at the bottom point, despite divergent directions.
+<b>(a)</b>:An illustration of redundancy-aware repulsion (RAR). Disagreement on anomalies is amplified between different learners’ feature spaces, while normal input converges to similar reconstructions guided by reconstruction training. <b>(b)</b>: A t-SNE plot of feature spaces from three learners on the anomaly. Feature spaces are pushed away by RAR during training. <b>(c)</b>: An illustration of dual-space uncertainty (DSU) in 1D regression with two learners. Utilizing output space uncertainty fails to differentiate the anomaly at the upper point. In comparison, DSU utilizes the disagreement on $\nabla_{X}{f}$ to detect such anomalies.
 
-**A simple illustration of the redundancy-aware repulsion:**
+**Overview of D2UE:**
 <div align="center">
-  <img width="800"  src="./images/intro.png">
+  <img width="800"  src="./images/overview.png">
 </div>
 
-Illustration of redundancy-aware repulsion (RAR). <b>Left</b>: During inference, all learners reconstruct samples from repulsed feature spaces to output space. In output space, normal features converge to agreement guided by the reconstruction training while the anomaly's disagreement is amplified. <b>Right</b>: A t-SNE plot of feature spaces from three learners on the anomaly. Feature spaces are repulsed by the redundancy-aware repulsion during training.
+In the training stage, the redundancy-aware repulsion (RAR) module amplifies the diversity of different models with both isotropic and scaling invariance. In the inference stage, the dual-space uncertainty is calculated, utilizing both $f(X)$ in the output space and $\nabla_{X}\mathcal{L}$ in the input space.
 
 **Visualization results**
 <div align="center">
