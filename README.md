@@ -3,21 +3,21 @@ Official PyTorch implementation for our MICCAI 2024 early accepted paper: "Revis
 
 **Illustration of the redundancy-aware repulsion and dual-space uncertainty:**
 <p align="center">
-  <img width="800"  src="./images/intro.png">
+  <img width="800"  src="./figures/intro.png">
 </p>
 
 <b>(a)</b>:An illustration of redundancy-aware repulsion (RAR). Disagreement on anomalies is amplified between different learners’ feature spaces, while normal input converges to similar reconstructions guided by reconstruction training. <b>(b)</b>: A t-SNE plot of feature spaces from three learners on the anomaly. Feature spaces are pushed away by RAR during training. <b>(c)</b>: An illustration of dual-space uncertainty (DSU) in 1D regression with two learners. Utilizing output space uncertainty fails to differentiate the anomaly at the upper point. In comparison, DSU utilizes the disagreement on $\nabla_{X}{f}$ to detect such anomalies.
 
 **Overview of D2UE:**
 <div align="center">
-  <img width="800"  src="./images/overview.png">
+  <img width="800"  src="./figures/overview.png">
 </div>
 
 In the training stage, the redundancy-aware repulsion (RAR) module amplifies the diversity of different models with both isotropic and scaling invariance. In the inference stage, the dual-space uncertainty is calculated, utilizing both $f(X)$ in the output space and $\nabla_{X}\mathcal{L}$ in the input space.
 
 **Visualization results**
 <div align="center">
-  <img width="800"  src="./images/visualizations.png">
+  <img width="800"  src="./figures/visualizations.png">
 </div>
 
 ## Data Preparation
