@@ -75,5 +75,13 @@ We appreciate these open-source codes and datasets for implementing our paper:
 If this work is helpful for you, please cite our papers:
 
 ```
-
+@misc{gu2024revisitingdeepensembleuncertainty,
+      title={Revisiting Deep Ensemble Uncertainty for Enhanced Medical Anomaly Detection}, 
+      author={Yi Gu and Yi Lin and Kwang-Ting Cheng and Hao Chen},
+      year={2024},
+      eprint={2409.17485},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2409.17485}, 
+}
 ```
